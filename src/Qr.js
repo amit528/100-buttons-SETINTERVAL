@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import jsQR from 'jsqr';
+import Form from './Form';
 
 class AadhaarScanner extends Component {
     state = {
@@ -28,7 +29,22 @@ class AadhaarScanner extends Component {
 
           if (code) {
             console.log('Scanned data:', code.data);
-            this.setState({ result: code.data });
+            const xmlData = code.data;
+
+            const xmlWithoutDeclaration = xmlData.replace(/<\?xml.*?\?>/, '');
+    const xmlWithoutSelfClosing = xmlWithoutDeclaration.replace(/\/>/g, '>');
+
+    // Split attributes and values
+    const attributes = xmlWithoutSelfClosing.match(/\S+?=".*?"/g);
+
+    // Create JSON object
+    var jsonObject = attributes?.reduce((result, attribute) => {
+      const [key, value] = attribute.split('=');
+      result[key] = value.replace(/"/g, '');
+      return result;
+    }, {});
+            this.setState({ result: jsonObject });
+            // localStorage.setItem("data", JSON.stringify(jsonObject));
             this.stopScanner();
           } else {
             requestAnimationFrame(handleScan);
@@ -58,7 +74,8 @@ class AadhaarScanner extends Component {
     return (
       <div>
         <video id="scanner" autoPlay playsInline />
-        <p>{this.state.result}</p>
+        <p>{JSON.stringify(this.state.result, null, 2)}</p>
+        <Form list={this.state.result}/>
       </div>
     );
   }
