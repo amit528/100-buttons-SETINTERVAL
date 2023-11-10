@@ -1,11 +1,13 @@
 import './App.css';
-import Buttons from './Button/Buttons';
+// import Buttons from './Button/Buttons';
+import AadhaarScanner from './Qr';
 
 function App() {
   return (
 
     <>
-      <Buttons/>
+    <AadhaarScanner />
+      {/* <Buttons/> */}
     </>
 
   );
