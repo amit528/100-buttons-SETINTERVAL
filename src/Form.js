@@ -63,12 +63,12 @@ function handleChange(e){
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail" className='col-lg-6' style={{textAlign : "left"}}>
-    <Form.Label>aadhaarNo</Form.Label>
+    <Form.Label>Aadhaar Number</Form.Label>
     <Form.Control type="aadhaarNo" placeholder="Enter Aadhaar Number" name="aadhaarNo" value={state.aadhaarNo} onChange={handleChange}/>
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail" className='col-lg-6' style={{textAlign : "left"}}>
-    <Form.Label>state</Form.Label>
+    <Form.Label>State</Form.Label>
     <Form.Control type="state" placeholder="Enter State" name="state" value={state.state} onChange={handleChange}/>
   </Form.Group>
 
@@ -78,7 +78,7 @@ function handleChange(e){
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail" className='col-lg-6' style={{textAlign : "left"}}>
-    <Form.Label>Name</Form.Label>
+    <Form.Label>Date Of Birth</Form.Label>
     <Form.Control type="name" placeholder="Enter name" name="dob" value={state.dob} onChange={handleChange}/>
   </Form.Group>
 
