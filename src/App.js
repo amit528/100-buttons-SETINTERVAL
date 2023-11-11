@@ -2,26 +2,24 @@ import React from 'react';
 import './App.css';
 // import Buttons from './Button/Buttons';
 import AadhaarScanner from './Qr';
+import Card1 from './Card';
 
 function App() {
-
-  const [showComponent, setShowComponent] = React.useState(false);
-
-  const handleClick = () => {
-    // Update the state to show the component
-    setShowComponent(true);
-  };
 
   return (
 
     <>
-    <button onClick={handleClick}>Scan</button>
+    {/* <div className="container d-grid border justify-content-center align-items-center w-25" style={{height:"100vh"}}>
+        <h1>Aadhar Scan</h1>
+    { !showComponent && <button onClick={handleClick}>Scan</button>}
     
-    {showComponent && <AadhaarScanner />}
-
+    {showComponent?<AadhaarScanner />:<button onClick={handleClick}>Scan</button>}
+</div> */}
 
       {/* <Buttons/> */}
       {/* <XmlToJsonConverter /> */}
+      <Card1 />
+      
     </>
 
   );

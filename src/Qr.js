@@ -73,8 +73,9 @@ class AadhaarScanner extends Component {
   render() {
     return (
       <div>
-        <video id="scanner" autoPlay playsInline />
-        <p>{JSON.stringify(this.state.result, null, 2)}</p>
+        <video id="scanner" autoPlay playsInline className='w-75'/>
+      
+        {/* <p>{JSON.stringify(this.state.result, null, 2)}</p> */}
         <Form list={this.state.result}/>
       </div>
     );
