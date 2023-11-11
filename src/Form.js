@@ -21,21 +21,21 @@ const[state, setState] = useState({
 })
 
 useEffect(() =>{
-setState({
-    name : data.name,
-    aadhaarNo : data.uid,
-    gender : data.gender,
-    co : data.co,
-    landMark : data.lm,
-    vtc : data.vtc,
-    po : data.po,
-    dist : data.dist,
-    taluk : data.subdist,
-    state : data.state,
-    pc : data.pc,
-    dob : data.dob
+// setState({
+//     name : data.name,
+//     aadhaarNo : data.uid,
+//     gender : data.gender,
+//     co : data.co,
+//     landMark : data.lm,
+//     vtc : data.vtc,
+//     po : data.po,
+//     dist : data.dist,
+//     taluk : data.subdist,
+//     state : data.state,
+//     pc : data.pc,
+//     dob : data.dob
 
-});
+// });
 console.log("scan");
 },[state]);
 
