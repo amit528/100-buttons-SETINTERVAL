@@ -29,21 +29,21 @@ class AadhaarScanner extends Component {
 
           if (code) {
             console.log('Scanned data:', code.data);
-            const xmlData = code.data;
+    //         const xmlData = code.data;
 
-            const xmlWithoutDeclaration = xmlData.replace(/<\?xml.*?\?>/, '');
-    const xmlWithoutSelfClosing = xmlWithoutDeclaration.replace(/\/>/g, '>');
+    //         const xmlWithoutDeclaration = xmlData.replace(/<\?xml.*?\?>/, '');
+    // const xmlWithoutSelfClosing = xmlWithoutDeclaration.replace(/\/>/g, '>');
 
-    // Split attributes and values
-    const attributes = xmlWithoutSelfClosing.match(/\S+?=".*?"/g);
+    // // Split attributes and values
+    // const attributes = xmlWithoutSelfClosing.match(/\S+?=".*?"/g);
 
-    // Create JSON object
-    var jsonObject = attributes?.reduce((result, attribute) => {
-      const [key, value] = attribute.split('=');
-      result[key] = value.replace(/"/g, '');
-      return result;
-    }, {});
-            this.setState({ result: jsonObject });
+    // // Create JSON object
+    // var jsonObject = attributes?.reduce((result, attribute) => {
+    //   const [key, value] = attribute.split('=');
+    //   result[key] = value.replace(/"/g, '');
+    //   return result;
+    // }, {});
+            this.setState({ result: code.data });
             // localStorage.setItem("data", JSON.stringify(jsonObject));
             this.stopScanner();
           } else {
@@ -76,7 +76,7 @@ class AadhaarScanner extends Component {
         <video id="scanner" autoPlay playsInline className='w-75'/>
       
         <p>{JSON.stringify(this.state.result, null, 2)}</p>
-        <Form list={this.state.result}/>
+        {/* <Form list={this.state.result}/> */}
       </div>
     );
   }

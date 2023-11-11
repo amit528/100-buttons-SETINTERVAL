@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap'
-import AadhaarScanner from './Qr'
+import AadhaarScanner from './Qrcode'
 
 export default class Card1 extends Component {
    state = {
