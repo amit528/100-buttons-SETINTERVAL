@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 // import Buttons from './Button/Buttons';
-import AadhaarScanner from './Qr';
 import Card1 from './Card';
+import ContactForm from './Contact';
 
 function App() {
 
@@ -18,8 +18,8 @@ function App() {
 
       {/* <Buttons/> */}
       {/* <XmlToJsonConverter /> */}
-      <Card1 />
-      
+      {/* <Card1 /> */}
+      <ContactForm />
     </>
 
   );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import jsQR from 'jsqr';
-import Form from './Form';
+// import Form from './Form';
 
 class AadhaarScanner extends Component {
     state = {

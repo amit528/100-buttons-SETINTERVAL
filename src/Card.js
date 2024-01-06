@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap'
-import AadhaarScanner from './Qrcode'
+// import AadhaarScanner from './Qrcode'
+// import QRCodeScanner from './Qrsample'
+import  Test  from './Qrsample'
 
 export default class Card1 extends Component {
    state = {
@@ -25,7 +27,7 @@ export default class Card1 extends Component {
   {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
   {/* <AadhaarScanner /> */}
   <Card.Body className='text-center'>
-  {showComponent?<AadhaarScanner />:
+  {showComponent?<Test />:
   <div className='d-flex justify-content-between'>
   Welcome to Aadhaar scanning
   <Button className='btn w-50' onClick={this.handleClick}>Scan</Button>
