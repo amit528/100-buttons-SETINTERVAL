@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {QrReader} from 'react-qr-reader';
+// import {QrReader} from 'react-qr-reader';
 
 class AadhaarScanner extends Component {
   state = {
@@ -24,12 +24,12 @@ class AadhaarScanner extends Component {
   render() {
     return (
       <div>
-        <QrReader
+        {/* <QrReader
           delay={300}
           onError={this.handleError}
           onScan={this.handleScan}
           style={{ width: '100%' }}
-        />
+        /> */}
         {this.state.result && (
           <div>
             <h2>Scanned Aadhaar Data:</h2>
